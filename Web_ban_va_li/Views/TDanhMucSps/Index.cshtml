@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Web_ban_va_li.Models.TDanhMucSp>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenSp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NganLapTop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanNang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoNoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDacTinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThoiGianBaoHanh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GioiThieuSp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChietKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnhDaiDien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaNhoNhat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaLonNhat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaChatLieuNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDtNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaHangSxNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLoaiNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNuocSxNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NganLapTop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanNang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoNoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDacTinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThoiGianBaoHanh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioiThieuSp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChietKhau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnhDaiDien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaNhoNhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaLonNhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaChatLieuNavigation.MaChatLieu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDtNavigation.MaDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaHangSxNavigation.MaHangSx)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLoaiNavigation.MaLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNuocSxNavigation.MaNuoc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaSp">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaSp">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaSp">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

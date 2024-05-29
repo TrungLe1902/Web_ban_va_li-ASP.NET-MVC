@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Web_ban_va_li.props" />
+</Project>
